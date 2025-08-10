@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=KoHo&family=Montserrat&family=Newsreader&family=Noto+Sans+JP&family=Raleway&family=Source+Sans+Pro&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-content {
+    padding: 10px 10px 0px 10px;
+    scrollbar-width: none;
+}
+
+@media screen and (max-width: 800px) {
+    .main-content {
+        padding: 10px 10px 50px 10px;
+    }
+}
+
+/* Usable classes */
+
+.link-button {
+    color: black;
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 13px;
+}
+
+.link-button:hover {
+    background-color: gainsboro;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-koho {
+    font-family: 'KoHo', sans-serif;
+}
+
+.font-monst {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-newsreader {
+    font-family: 'Newsreader', serif;
+}
+
+.font-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.font-sourcesans {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.font-notosans {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* -- */

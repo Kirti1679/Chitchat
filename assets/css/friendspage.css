@@ -1,0 +1,45 @@
+.friends-section {
+    width: 100;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: 200ms;
+}
+
+.friends-section > div {
+    width: 30%;
+}
+
+.friends-section header {
+    background: #e9ecef;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 200ms;
+    text-align: center;
+}
+
+.friends-section-list {
+    border: 1px solid list;
+}
+
+.in-friends-list {
+    transform: scale(0.75);
+}
+
+@media screen and (max-width: 1000px) {
+    .friends-section > div {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .friends-section > div:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .friends-section header {
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+}

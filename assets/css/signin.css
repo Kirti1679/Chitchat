@@ -1,0 +1,115 @@
+/* .sign-in-header {
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(145, 143, 143, 20%);
+    width: 100%;
+    transition: 200ms;
+} */
+
+/* .sign-in-header a {
+    color: black;
+}
+
+.sign-in-header > h3 {
+    margin: 10px 0 10px 0;
+} */
+
+.sign-in-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-height: 90vh;
+    margin: 0;
+    padding: 0;
+}
+
+.sign-in-box {
+    width: 400px;
+    background-color:rgba(248, 172, 172, 70%);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 2px 1px grey;
+    overflow: auto;
+    transition: 200ms;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.form-field {
+    width: 100%;
+    margin: 20px 10px 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-header {
+    font-size: 23px;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-bottom {
+    padding: 5px;
+}
+
+.form-field input {
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.form-field-button {
+    justify-content: center;
+    text-align: center;
+}
+
+.form-field-button button {
+    padding: 7px 18px 7px 18px;
+    border: 1px solid rgb(255, 179, 191);
+    background-color: white;
+    border-radius: 15px;
+    transition: 300ms;
+}
+
+.form-field-button button:hover {
+    cursor: pointer;
+    border: 1px solid rgb(172, 71, 88);
+    background-image: linear-gradient(rgb(230, 104, 125), rgb(230, 210, 210));
+}
+
+@media screen and (max-height: 600px) {
+    .sign-in-box {
+        height: 70%;
+    }
+
+    .sign-in-header {
+        font-size: 18px; 
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sign-in-box {
+        scale: 0.83;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .sign-in-box {
+        width: 95%;
+    }
+}

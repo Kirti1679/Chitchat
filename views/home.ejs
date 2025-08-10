@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/home.css" type="text/css">
+
+<% if(locals.user) { %>
+<div class="home-content">
+    <div class="card">
+        <div class="card-body">
+            <h1>Hey, What's up <a href="/profile/<%= locals.user.id %>" style="color: rgb(83, 83, 253)">[<%= locals.user.username %>]</a> !</h1>
+        </div>
+    </div>  
+</div>
+<% } else { %>
+<div class="home-header font-koho has-text-weight-bold">
+    <h1>Welcome!</h1>
+</div>
+<br>
+
+<div class="home-content font-notosans">
+    <div class="home-content-box animate__animated animate__bounceInDown animate__fast">
+        <p>
+            You need to log in &nbsp;
+            <button class="link-button bttn-unite bttn-sm bttn-primary home-login-button">
+                <a href="/signin">Log In</a>
+            </button>
+            &nbsp; to continue.
+        </p>
+    </div>
+</div>    
+<% } %>

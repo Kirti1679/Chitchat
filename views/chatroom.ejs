@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/chatroom.css" type="text/css">
+
+<div class="chatroom">
+    <div class="chatbox">
+        <div class="chatbox-item">
+            <div class="chatbox-sidebar">
+                <!-- <h4 class="sidebar-header">Rooms</h4>
+                <div class="chatbox-rooms sidebar-items">
+                    <p class="chatbox-sidebar-button">Room1</p>
+                    <p class="chatbox-sidebar-button">Room2</p>
+                </div> -->
+                <h4 class="sidebar-header">Users</h4>
+                <div class="chatbox-users sidebar-items">
+                    <% for(let i = 0; i < friends.length; i++) { %>
+                        <p class="chatbox-sidebar-button" id="<%= friends[i].userid.id %>"><%= friends[i].userid.username %></p>
+                    <% } %>
+                </div>
+            </div>
+            <div class="chatbox-content">
+                <div class="chatbox-header">
+                    <div id="chatbox-hamburger">
+                        <div id="hb-1"></div>
+                        <div id="hb-2"></div>
+                        <div id="hb-3"></div>
+                    </div>
+                    <p class="font-koho chatbox-header-text">
+                        ChitChat
+                    </p>
+                </div>
+                <div class="message-box">
+                    <ul class="chatbox-messages font-raleway">
+                        <li style="list-style: none; text-align: center;">Open a chat from the sidebar</li>
+                    </ul>
+                </div>
+                <form id="input-form" class="message-input-box" action="javascript:void(0)">
+                    <input type="text" id="message-input">
+                    <button id="message-send" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/clientSockets.js"></script>
+<script src="/js/chatroom.js" type="text/javascript"></script>
+

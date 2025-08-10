@@ -1,0 +1,260 @@
+.chatroom {
+    width: 100%;
+    height: 100%;
+}
+
+/* chatbox box */
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80vh;
+}
+
+.chatbox-item {
+    width: 50%;
+    height: 100%;
+    transition: 100ms;
+    border: 1px solid #000;
+    position: relative;
+}
+
+/* sidebar */
+.chatbox-sidebar {
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    background-color:rgb(74, 79, 83);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    transition: 250ms; 
+}
+
+.chatbox-sidebar * {
+    transition: 150ms;
+}
+
+
+.chatbox-sidebar > h4 {
+    background: rgba(236, 230, 230, 10%);
+    padding: 3px 3px 3px 10px;
+    color:white;
+}
+
+/* sidebar items */
+.sidebar-items {
+    margin-left: 15px;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    padding: 5px 5px 5px 10px;
+    color:white;
+}
+
+.sidebar-items > p {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px 3px 3px 5px;
+}
+
+.sidebar-items > p:hover {
+    background: rgba(236, 230, 230, 15%);
+}
+
+.setBackgroundForButton {
+    background: rgba(236, 230, 230, 30%) !important;
+}
+
+/* chat content */
+.chatbox-content {
+    transition: 250ms;
+    margin-left: 0px;
+    height: 100%;
+    /* width: 100%; */
+    position: relative;
+}
+
+/* chat-box header */
+.chatbox-header {
+    position: relative;
+    text-align: center;
+    background-color: rgb(74, 79, 83);
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.chatbox-header-text {
+    margin: auto;
+}
+
+/* hamburger menu */
+#chatbox-hamburger {
+    position: absolute;
+    left: 1%;
+    cursor: pointer;
+}
+
+#chatbox-hamburger > div {
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 5px 0;
+    transition: 450ms;
+}
+
+#chatbox-hamburger > div:nth-child(2) {
+    transition: 550ms;
+}
+
+.transform-burgeritem {
+    transform: scale(0.95);
+}
+
+.transform-burgeritem > div:nth-child(2){
+    transform: translateX(-50px);
+    visibility: hidden;
+}
+
+.transform-burgeritem > div:nth-child(1) {
+    transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+
+
+.transform-burgeritem > div:nth-child(3) {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+/* messages */
+
+.message-box {
+    width: 100%;   
+    height: 100%; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.chatbox-messages {
+    width: 100%;
+    height: 84%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.chat-message {
+    list-style-type: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    max-width: 60%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-time {
+    align-self: baseline;
+    font-size: 11px;
+}
+
+.message-content {
+    border-radius: 10px;
+    padding: 5px 8px;
+    color: white;
+    box-shadow: 0.2px 0px 0.4px 0px rgba(112, 112, 112, 0.8);
+}
+
+.sender-message {
+    align-self: flex-start;
+    margin-left: -26px;
+    
+}
+
+.sender-message > .message-content {
+    background-color:rgba(14, 14, 73, 0.8);
+}
+
+.own-message {
+    align-self: flex-end;
+    margin-right: 10px;
+}
+
+.own-message > .message-time {
+    align-self: flex-end;
+}
+
+.own-message > .message-content {
+    background-color:rgba(121, 121, 131, 0.8);
+}
+
+/* message input form */
+.message-input-box {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: absolute;
+    width: auto;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    background-color:rgb(74, 79, 83);
+} 
+
+#message-input {
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 20px;
+    margin: 4px;
+    padding: 5px 20px;
+    min-width: 50px;
+    border: 1px solid black;
+}
+
+#message-input:focus {
+    outline: none;
+}
+
+#message-send {
+    padding: 5px 20px;
+    border-radius: 15px;
+    margin: 4px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#message-send:focus {
+    outline: none;
+}
+
+/* media styles */
+
+@media screen and (max-width: 1300px) {
+    .chatbox-item {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .chatbox-item {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .chatbox-item {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .chatbox-item {
+        width: 100%;
+    }
+}

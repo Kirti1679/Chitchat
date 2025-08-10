@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/founduserpage.css" type="text/css">
+
+<div class="founduser-div">
+    <div class="found-user-box">
+    <% if(foundusers.length == 0) { %> 
+        <h4>No such user found!</h4>
+    <% } else { %>
+        <% foundusers.forEach((curruser) => { %>
+            <div class="found-user font-koho">
+                <div class="found-user-img">
+                    <img src="<%= curruser.avatar %>" alt="User Image">
+                    &nbsp; &nbsp;
+                    <span class="found-user-name"><a href="/profile/<%= curruser.id %>"><%= curruser.username %></a></span>
+                </div>
+                <div class="request-buttons">
+                    <% if(thisuser.pendingRequests.find(userr => userr.userid == curruser.id)) { %>
+                        <span class="request-button-icon accept-friend-button" data-thisusersid="<%= curruser.id %>">
+                            Accept
+                        </span>
+                        <span class="request-button-icon decline-friend-button" data-thisusersid="<%= curruser.id %>">
+                            Decline
+                        </span>
+                    <% } else if(thisuser.sentRequests.find(userr => userr.userid == curruser.id)) { %>
+                        <span class="request-button-icon withdraw-request-button" data-thisusersid="<%= curruser.id %>">
+                            Withdraw
+                        </span>
+                    <% } else if(thisuser.friendsList.find(userr => userr.userid == curruser.id)) { %>
+                        <span class="request-button-icon remove-friend-button" data-thisusersid="<%= curruser.id %>">
+                            Remove Friend
+                        </span>
+                    <% } else { %>
+                        <span class="request-button-icon add-friend-button" data-thisusersid="<%= curruser.id %>">
+                            Add Friend
+                        </span>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    <% } %>
+    </div>
+</div>
+
+<script src="/js/founduserpage.js" type="text/javascript"></script>

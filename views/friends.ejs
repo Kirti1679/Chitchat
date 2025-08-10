@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/css/friendspage.css" type="text/css">
+<link rel="stylesheet" href="/css/founduserpage.css" type="text/css">
+
+<div class="friends-section">
+    <div class="accepted-friends-section">
+        <header class="font-monst">Friends</header>
+        <div class="accepted-friends-list friends-section-list">
+            <% if(friendList && friendList.length) { %>
+                <% friendList.forEach((friend, ind) => { %>
+                    <div class="found-user font-koho in-friends-list" id="friend-<%= ind %>">
+                        <div class="found-user-img">
+                            <img src="<%= friend.userid.avatar %>" alt="User Image"> &nbsp; &nbsp;
+                            <span class="found-user-name"><a href="/profile/<%= friend.userid.id %>"><%= friend.userid.username %></a></span>
+                        </div>
+                        <div class="request-buttons">
+                            <span class="request-button-icon remove-friend-button" data-thisusersid="<%= friend.userid.id %>">
+                                Remove Friend
+                            </span>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                    <div class="none-in-list">No friends to show here.</div>
+            <% } %>
+        </div>
+    </div>
+    <div class="sent-requests-section">
+        <header class="font-monst">Sent Requests</header>
+        <div class="sent-requests-list friends-section-list">
+            <% if(sentRequests && sentRequests.length) { %>
+                <% sentRequests.forEach((request, ind) => { %>
+                    <div class="found-user font-koho in-friends-list" id="sentRequest-<%= ind %>">
+                        <div class="found-user-img">
+                            <img src="<%= request.userid.avatar %>" alt="User Image"> &nbsp; &nbsp;
+                            <span class="found-user-name"><a href="/profile/<%= request.userid.id %>"><%= request.userid.username %></a></span>
+                        </div>
+                        <div class="request-buttons">
+                            <span class="request-button-icon withdraw-request-button" data-thisusersid="<%= request.userid.id %>">
+                                Withdraw
+                            </span>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div class="none-in-list">No request sent.</div>
+            <% } %>
+        </div>
+    </div>
+    <div class="pending-requests-section">
+        <header class="font-monst">Requests Pending</header>
+        <div class="pending-requests-list friends-section-list">
+            <% if(pendingRequests && pendingRequests.length) { %>
+                <% pendingRequests.forEach((request, ind) => { %>
+                    <div class="found-user font-koho in-friends-list" id="pendingRequest-<%= ind %>">
+                        <div class="found-user-img">
+                            <img src="<%= request.userid.avatar %>" alt="User Image"> &nbsp; &nbsp;
+                            <span class="found-user-name"><a href="/profile/<%= request.userid.id %>"><%= request.userid.username %></a></span>
+                        </div>
+                        <div class="request-buttons">
+                            <span class="request-button-icon accept-friend-button" data-thisusersid="<%= request.userid.id %>">
+                                Accept
+                            </span>
+                            <span class="request-button-icon decline-friend-button" data-thisusersid="<%= request.userid.id %>">
+                                Decline
+                            </span>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div class="none-in-list">No request pending.</div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<script src="/js/founduserpage.js" type="text/javascript"></script>

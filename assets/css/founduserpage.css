@@ -1,0 +1,86 @@
+.founduser-div {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.found-user-box {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.found-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.found-user-img {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 50%;
+}
+
+.found-user-img > img {
+    height: 65px;
+    width: 65px;
+    object-fit: cover; 
+}
+
+.found-user-name {
+    width: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 21px;
+}
+
+.request-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.request-button-icon {
+    margin: 0 2px 0 2px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    transition: 200ms;
+    background-color: rgb(207, 204, 204);
+}
+
+.request-button-icon:hover {
+    background-color: rgb(180, 178, 178);
+}
+
+@media screen and (max-width: 1000px) {
+    .found-user-box {
+        width: 75%;
+    }   
+}
+
+@media screen and (max-width: 900px) {
+    .found-user-box {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .found-user-box {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .found-user-box {
+        width: 95%;
+    }
+}

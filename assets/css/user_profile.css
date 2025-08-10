@@ -1,0 +1,61 @@
+.card {
+    overflow: hidden;
+    height: 295px;
+    margin: 0;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 230px;
+}
+
+.card-body {
+    overflow: auto;
+} 
+
+.profile-image-item { 
+    grid-area: prof; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.friends-button-div {
+    margin: 10px 0 10px 0;
+}
+
+.user-friends-button {
+    background-color: #308b70;
+    color: white;
+}
+
+.profile-desc-item { 
+    grid-area: desc; 
+}
+.profile-update-item { 
+    grid-area: update; 
+}
+
+.profile-grid {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    'prof desc'
+    'prof update'
+    'prof .';
+    grid-template-columns: 35% 55%;
+    grid-gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .profile-grid {
+        grid-template-areas: 
+        'prof'
+        'desc'
+        'update';
+        grid-template-columns: 100%;
+    }
+}
